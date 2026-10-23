@@ -6,11 +6,9 @@ from kiwipiepy import Kiwi
 from wordcloud import WordCloud
 from collections import Counter
 
-# --- 0. 한글 폰트 설정 (Matplotlib) ---
-FONT_PATH = "NanumGothic.ttf"
-font_prop = fm.FontProperties(fname=FONT_PATH)
-plt.rc('font', family=font_prop.get_name())
-plt.rc('axes', unicode_minus=False)  # 마이너스 기호 깨짐 방지
+# --- 0. 한글 폰트 설정 ---
+plt.rc('font', family='NanumGothic')
+plt.rc('axes', unicode_minus=False)
 
 # --- 1. 감성 사전 정의 (각 10개 이상) ---
 POSITIVE_DICT = {'좋다', '기쁘다', '훌륭하다', '성공', '만족', '행복', '최고', '감사', '편리', '희망', '유익하다', '완벽'}
